@@ -203,6 +203,8 @@ h2 {
 }
 
 
+
+
 /* add form:*/
 
 main {
@@ -226,20 +228,42 @@ main {
   
   /*form input fields*/
   form input, form textarea {
-  outline: 0;
-  padding: 7%;
-  border-radius: 8px;
-  display: block; 
-  width: 100%;
-  margin-top: 1em;
-  border: 1px solid black;
-  background: white;
-  } 
+    outline: 0;
+    padding: 2px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    border: 1px solid black;
+    background: white;
+    margin-bottom: 3%;
+  }
   
   form input:focus, form textarea:focus {
-    box-shadow: 0 0px 2px rgb(87, 233, 68) !important;
+    box-shadow: 0 0px 5px rgb(156, 68, 233) !important;
   } /* shadow when you click on the text boxes */
   
+  .btn-add-book {
+    background-color: #d3aefc; 
+    border-radius: 100px;
+    box-shadow: rgba(211, 174, 252, .2) 0 -25px 18px -14px inset, rgba(211, 174, 252, .15) 0 1px 2px, rgba(211, 174, 252, .15) 0 2px 4px, rgba(211, 174, 252, .15) 0 4px 8px, rgba(211, 174, 252, .15) 0 8px 16px, rgba(211, 174, 252, .15) 0 16px 32px; /* Light purple shadow */
+    color: #6a4c9c; 
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-add-book:hover {
+    box-shadow: rgba(211, 174, 252, .35) 0 -25px 18px -14px inset, rgba(211, 174, 252, .25) 0 1px 2px, rgba(211, 174, 252, .25) 0 2px 4px, rgba(211, 174, 252, .25) 0 4px 8px, rgba(211, 174, 252, .25) 0 8px 16px, rgba(211, 174, 252, .25) 0 16px 32px; /* Lighter purple shadow on hover */
+    transform: scale(1.05) rotate(-1deg);
+}
  
 
   /* end of form */
