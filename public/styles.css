@@ -1,0 +1,245 @@
+  /* Reset Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/bg.png');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
+    margin: 0;
+}
+
+
+header {
+    background-color: #c9b4db;
+    padding: 20px;
+    text-align: center;
+    border-bottom-color:#ac82d1;
+    border-bottom-style:dotted;
+}
+
+header a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Book List Layout */
+.book-list {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap to a new row when needed */
+    gap: 20px; /* Adds spacing between boxes */
+    justify-content: center; /* Centers all boxes horizontally */
+    padding: 20px;
+}
+
+.book-box {
+    flex: 1 1 calc(33.333% - 40px); /* 3 boxes per row with spacing */
+    max-width: 300px; /* Prevents boxes from getting too wide */
+    background-color: rgb(244, 228, 255);
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: #2c2c2c 4px 4px 0 0;
+	border: black solid;
+}
+
+.book-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-content {
+    padding: 15px;
+}
+
+.book-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.book-content p {
+    margin: 5px 0;
+}
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions .btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+.actions .btn-danger {
+    background-color: #dc3545;
+}
+
+.actions .btn:hover {
+    opacity: 0.9;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    -webkit-text-stroke: 2px rgba(205, 104, 255, 0.8); /* Black stroke around the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+
+.btn-add {
+  background-color: #fbeee0;
+  border: 2px solid #17011b;
+  border-radius: 30px;
+  box-shadow: #320042 4px 4px 0 0;
+  color: #370042;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-add:hover {
+  background-color: #fff;
+}
+
+.btn-add:active {
+  box-shadow: #3d0042 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .btn-add {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.btn-edit {
+    background-color: #a59ae0; /* Periwinkle blue background */
+    border-radius: 100px;
+    box-shadow: rgba(145, 133, 212, 0.2) 0 -25px 18px -14px inset, rgba(142, 130, 214, .15) 0 1px 2px, rgba(142, 130, 214, .15) 0 2px 4px, rgba(142, 130, 214, .15) 0 4px 8px, rgba(142, 130, 214, .15) 0 8px 16px, rgba(142, 130, 214, .15) 0 16px 32px; /* Periwinkle shadow */
+    color: #5a4e96; /* Dark periwinkle text color */
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-edit:hover {
+    box-shadow: rgba(142, 130, 214, .35) 0 -25px 18px -14px inset, rgba(142, 130, 214, .25) 0 1px 2px, rgba(142, 130, 214, .25) 0 2px 4px, rgba(142, 130, 214, .25) 0 4px 8px, rgba(142, 130, 214, .25) 0 8px 16px, rgba(142, 130, 214, .25) 0 16px 32px; /* Lighter periwinkle shadow on hover */
+    transform: scale(1.05) rotate(-1deg);
+}
+
+
+.btn-delete {
+    background-color: #f7a1c6; /* Light pink background */
+    border-radius: 100px;
+    box-shadow: rgba(255, 105, 180, .2) 0 -25px 18px -14px inset, rgba(255, 105, 180, .15) 0 1px 2px, rgba(255, 105, 180, .15) 0 2px 4px, rgba(255, 105, 180, .15) 0 4px 8px, rgba(255, 105, 180, .15) 0 8px 16px, rgba(255, 105, 180, .15) 0 16px 32px; /* Pink shadow */
+    color: #d81b60; /* Dark pink text color */
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-delete:hover {
+    box-shadow: rgba(255, 105, 180, .35) 0 -25px 18px -14px inset, rgba(255, 105, 180, .25) 0 1px 2px, rgba(255, 105, 180, .25) 0 2px 4px, rgba(255, 105, 180, .25) 0 4px 8px, rgba(255, 105, 180, .25) 0 8px 16px, rgba(255, 105, 180, .25) 0 16px 32px; /* Lighter pink shadow on hover */
+    transform: scale(1.05) rotate(-1deg);
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-decoration: underline;
+}
+
+
+/* add form:*/
+
+main {
+    border-color: black;
+    border-style: solid;
+    margin: 15%;
+    border-radius: 30px;
+    margin-top: 5%;
+    background-color:#ac82d1;
+}
+ 
+
+.add-form {
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 15px;
+    
+  }
+
+  
+  /*form input fields*/
+  form input, form textarea {
+  outline: 0;
+  padding: 7%;
+  border-radius: 8px;
+  display: block; 
+  width: 100%;
+  margin-top: 1em;
+  border: 1px solid black;
+  background: white;
+  } 
+  
+  form input:focus, form textarea:focus {
+    box-shadow: 0 0px 2px rgb(87, 233, 68) !important;
+  } /* shadow when you click on the text boxes */
+  
+ 
+
+  /* end of form */
